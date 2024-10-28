@@ -1,0 +1,87 @@
+ Linux Filters(grep,sed,awk)
+
+
+   
+
+grep:
+    1  clear
+    2  cat>file1.txt
+    3  cat file1.txt
+    4  cat file1.txt | grep "filter"
+    5  cat file1.txt | grep "grep"
+    6  cat file1.txt | grep "sed"
+    7  cat file1.txt | grep "awk"
+    8  cat file1.txt | grep "are"
+    9  cat file1.txt | grep "for"
+   10  clear
+   
+  sed:
+
+   11  cat file1.txt
+   12  cat file1.txt | sed 'text/s/grep/devops/'
+   13  cat file1.txt | sed 's/grep/devops/'
+   14  cat file1.txt | sed 's/filter/ubuntu/'
+   15  cat file1.txt | sed '/are/s/grep/devops/'
+   16  cat file1.txt | sed '/commands/s/sed/jenkins/'
+   17  clear
+   18  nano address.txt
+   19  ls
+   20  cat address.txt
+   21  cat address.txt | sed 's/^/https:\/\//'
+   22  nano address.txt
+   23  cat address.txt
+   24  cat address.txt | sed '/^$/d'
+   25  clear
+   26  nano address.txt
+   27  cat address.txt
+   28  cat address.txt | sed 's/[0-9]//g'
+   29  cat address.txt | sed 's/[a-z]//g'
+   30  clear
+   31  nano address.txt
+   32  cat address.txt
+   33  cat address.txt | sed 'y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+   34  cat address.txt | sed 'y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/'
+   35  nano address.txt
+   36  cat address.txt
+   37  cat address.txt | sed 'y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/'
+   38  CLEAR
+   39  clear
+   40  nano address.txt
+   41  cat address.txt
+   43  nano address.txt
+   44   cat address.txt | sed -e 's/com/org/' -e 's/in/mil/'
+   45  clear
+   46  ls
+
+awk:
+
+   47  cat file1.txt
+   48  cat file1.txt | awk '{print $1}'
+   49  cat file1.txt | awk '{print $2}'
+   50  cat file1.txt | awk '{print $3}'
+   51  cat file1.txt | awk '{print $4}'
+   52  cat file1.txt | awk '{print $5}'
+   53  cat file1.txt | awk '{print $6}'
+   54  clear
+   55  cat file1.txt
+   56   cat file1.txt | awk '/grep/{print $2}'
+   57   cat file1.txt | awk '/filter/{print $1}'
+   58  cat>address1.txt
+   59  cat address1.txt
+   60   awk -F '.' '{print $1}' address1.txt
+   61   awk -F '.' '{print $2}' address1.txt
+   62   awk -F '.' '{print $3}' address1.txt
+   63  clear
+   64  nano add.txt
+   65  cat add.txt
+   66  awk '{k+=$1} END {print k}' add.txt
+   67  awk '{k+=$2} END {print k}' add.txt
+   68  awk '{k+=$3} END {print k}' add.txt
+   69  nano add.txt
+   70  cat add.txt
+   71  awk '{k+=$1} END {print k}' add.txt
+   72  awk '{k+=$2} END {print k}' add.txt
+   73  awk '{k+=$3} END {print k}' add.txt
+   74  awk '{k+=$4} END {print k}' add.txt
+   75  awk '{k+=$5} END {print k}' add.txt
+   76  awk '{k+=$6} END {print k}' add.txt
